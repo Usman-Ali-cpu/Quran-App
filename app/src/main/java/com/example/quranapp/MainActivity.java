@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     EditText ayyatnotext;
     Button search;
     TextView displayText;
+    Button next;
+    Button previous;
+    int ayyatindex =0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         ayyatnotext = findViewById(R.id.ayyatno);
         displayText = findViewById(R.id.displaytext);
         search = findViewById(R.id.btn1);
+        next = findViewById(R.id.next);
+        previous = findViewById(R.id.prev);
+
+
 
 
 
@@ -40,11 +47,35 @@ public class MainActivity extends AppCompatActivity {
                 if(surrah >= 1 && surrah <=114){
                     surrahindex = qdata.SSP[surrah-1];
                 }
-                int ayyatindex = surrahindex + ayyat;
+                ayyatindex = surrahindex + ayyat;
                 displayText.setText(quran.QuranArabicText[ayyatindex]);
 
             }
         });
+        next.setOnClickListener(new View.OnClickListener(){
+
+
+            @Override
+            public void onClick(View v) {
+                QuranArabicText quran = new QuranArabicText();
+                Data qdata = new Data();
+                ayyatindex++;
+                displayText.setText(quran.QuranArabicText[ayyatindex]);
+            }
+        });
+
+        previous.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                QuranArabicText quran = new QuranArabicText();
+                Data qdata = new Data();
+                ayyatindex--;
+                displayText.setText(quran.QuranArabicText[ayyatindex]);
+            }
+        });
+
+
 
 
 
