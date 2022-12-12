@@ -5,6 +5,7 @@ import data.Data;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                     surrahindex = qdata.SSP[surrah-1];
                 }
                 ayyatindex = surrahindex + ayyat;
+                displayText.setMovementMethod(new ScrollingMovementMethod());
                 displayText.setText(quran.QuranArabicText[ayyatindex]);
 
             }
