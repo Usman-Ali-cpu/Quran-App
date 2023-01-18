@@ -4,6 +4,8 @@ import data.Data;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     TextView displayText;
     Button next;
     Button previous;
+    Button getcode;
     int ayyatindex =0;
 
     @Override
@@ -30,6 +33,16 @@ public class MainActivity extends AppCompatActivity {
         search = findViewById(R.id.btn1);
         next = findViewById(R.id.next);
         previous = findViewById(R.id.prev);
+        getcode = findViewById(R.id.get_code);
+
+        getcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse("https://github.com/Usman-Ali-cpu/Quran-App"));
+                startActivity(intent);
+            }
+        });
 
 
 
