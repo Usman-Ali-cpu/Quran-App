@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         search = findViewById(R.id.btn1);
         next = findViewById(R.id.next);
         previous = findViewById(R.id.prev);
-        getcode = findViewById(R.id.get_code);
+        getcode = findViewById(R.id.btn);
 
         getcode.setOnClickListener(new View.OnClickListener() {
             @Override

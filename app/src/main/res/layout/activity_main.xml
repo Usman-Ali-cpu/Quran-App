@@ -33,11 +33,11 @@
     <EditText
         android:id="@+id/surrahNo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_marginTop="12dp"
-        android:background="@color/white"
         android:backgroundTint="#FFFFFF"
         android:ems="10"
+
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -48,8 +48,9 @@
     <EditText
         android:id="@+id/ayyatno"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="36dp"
+        tools:ignore="SpeakableTextPresentCheck"
         android:ems="10"
         android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,7 +75,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Search"
-        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn"
         app:layout_constraintTop_toBottomOf="@+id/ayyatno" />
@@ -100,9 +100,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="44dp"
-        android:background="#DCA057"
+        android:background="@color/black"
         android:hapticFeedbackEnabled="false"
         android:text="Previous"
+        android:textColorHint="@color/white"
 
         app:layout_constraintBottom_toBottomOf="@+id/next"
         app:layout_constraintEnd_toStartOf="@+id/next"
@@ -115,10 +116,11 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="88dp"
-        android:background="#87E476"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/black"
         android:text="next"
+        android:textColorHint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
